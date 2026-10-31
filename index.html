@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mes BEX</title>
+  <link rel="stylesheet" href="./app-5b9461de8975395a.css" integrity="sha384-aNohKhwPhfuzlIqJv8axvOBOIjVV1u8SbDVWj9ksyHK3MfmNCPV5c0R4IFO6fcW1"/>
+  
+  
+<script type="module">
+import init, * as bindings from './bex-app-46f191b9e4a8bf5c.js';
+const wasm = await init({ module_or_path: './bex-app-63268f564bf73ea5_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+<link rel="modulepreload" href="./bex-app-46f191b9e4a8bf5c.js" crossorigin="anonymous" integrity="sha384-DL22gkqAa4yzEcS6WEFwr0ftRwVmWiTfKNOGPdHGdE2+VCWleU6hnCj39QiRT1Mo"><link rel="preload" href="./bex-app-63268f564bf73ea5_bg.wasm" crossorigin="anonymous" integrity="sha384-sH6V6Y6R67c3fhXwvg4RwAlO4znHK+fDoYyYpdlr+4CCb7GZMLmT/6HFrdwJybb1" as="fetch" type="application/wasm"></head>
+<body></body>
+</html>
